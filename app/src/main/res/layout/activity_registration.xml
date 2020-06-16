@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".RegistrationActivity">
+
+
+    <EditText
+        android:id="@+id/fnameEditText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/edittextxml"
+        android:ems="10"
+        android:hint="  Full Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/companyEditText"
+        app:layout_constraintEnd_toEndOf="@+id/companyEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/companyEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/companyEditText"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:background="@drawable/edittextxml"
+        android:ems="10"
+        android:hint="  Company"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/designationSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/designationSpinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/designationSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/fnameEditText"
+        tools:shadowRadius="4dp" />
+
+    <Spinner
+        android:id="@+id/designationSpinner"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/edittextxml"
+        android:outlineProvider="bounds"
+        app:layout_constraintBottom_toTopOf="@+id/cnumEditText"
+        app:layout_constraintEnd_toEndOf="@+id/cnumEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cnumEditText"
+        app:layout_constraintTop_toBottomOf="@+id/companyEditText" />
+
+    <EditText
+        android:id="@+id/cnumEditText"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:background="@drawable/edittextxml"
+        android:ems="10"
+        android:hint="  Contact Number"
+        android:inputType="number|phone"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditText"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/designationSpinner" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:background="@drawable/edittextxml"
+        android:ems="10"
+        android:hint="  Email"
+        android:inputType="textEmailAddress|textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/updateCheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/updateCheckBox"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/updateCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/cnumEditText" />
+
+    <CheckBox
+        android:id="@+id/updateCheckBox"
+        android:checked="true"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:text="I would like to receive news and updates regarding the latest products and trends in the industry."
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintEnd_toEndOf="@+id/submitBtn"
+        app:layout_constraintStart_toStartOf="@+id/submitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        style="@android:style/Widget.Holo.Button.Borderless"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorAccent"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateCheckBox" />
+
+    <Button
+        android:id="@+id/showBtn"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Borderless.Small"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/dbBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="183dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/clogs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/fter" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="607dp"
+        android:layout_height="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/hder" />
+
+</android.support.constraint.ConstraintLayout>
